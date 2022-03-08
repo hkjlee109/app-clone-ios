@@ -22,6 +22,10 @@
 		4A452F1A27D012C4008D096F /* PopCoordinatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A452F1927D012C4008D096F /* PopCoordinatable.swift */; };
 		4A452F1D27D107C2008D096F /* UIImage+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A452F1C27D107C2008D096F /* UIImage+Ext.swift */; };
 		4A452F2027D692A3008D096F /* StaysHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A452F1F27D692A3008D096F /* StaysHeaderView.swift */; };
+		4A452F2227D77336008D096F /* RecentSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A452F2127D77336008D096F /* RecentSearchCell.swift */; };
+		4A452F2427D79140008D096F /* TextHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A452F2327D79140008D096F /* TextHeaderCollectionReusableView.swift */; };
+		4A452F2727D795D5008D096F /* NearbyHotelSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A452F2627D795D5008D096F /* NearbyHotelSearchCell.swift */; };
+		4A452F2927D7982D008D096F /* RecentPlaceViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A452F2827D7982D008D096F /* RecentPlaceViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +46,10 @@
 		4A452F1927D012C4008D096F /* PopCoordinatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopCoordinatable.swift; sourceTree = "<group>"; };
 		4A452F1C27D107C2008D096F /* UIImage+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Ext.swift"; sourceTree = "<group>"; };
 		4A452F1F27D692A3008D096F /* StaysHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaysHeaderView.swift; sourceTree = "<group>"; };
+		4A452F2127D77336008D096F /* RecentSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentSearchCell.swift; sourceTree = "<group>"; };
+		4A452F2327D79140008D096F /* TextHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		4A452F2627D795D5008D096F /* NearbyHotelSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyHotelSearchCell.swift; sourceTree = "<group>"; };
+		4A452F2827D7982D008D096F /* RecentPlaceViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentPlaceViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,10 +144,22 @@
 		4A452F1E27D6928B008D096F /* Stays */ = {
 			isa = PBXGroup;
 			children = (
+				4A452F2527D795C7008D096F /* CollectionView */,
 				4A452EF627CFB789008D096F /* StaysViewController.swift */,
 				4A452F1F27D692A3008D096F /* StaysHeaderView.swift */,
 			);
 			path = Stays;
+			sourceTree = "<group>";
+		};
+		4A452F2527D795C7008D096F /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				4A452F2127D77336008D096F /* RecentSearchCell.swift */,
+				4A452F2327D79140008D096F /* TextHeaderCollectionReusableView.swift */,
+				4A452F2627D795D5008D096F /* NearbyHotelSearchCell.swift */,
+				4A452F2827D7982D008D096F /* RecentPlaceViewCell.swift */,
+			);
+			path = CollectionView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,8 +240,12 @@
 				4A452F0C27D0011A008D096F /* CompositionRoot+ViewFactory.swift in Sources */,
 				4A452F1827D01130008D096F /* StaysCoordinator.swift in Sources */,
 				4A452F1627D00306008D096F /* Coordinatable.swift in Sources */,
+				4A452F2227D77336008D096F /* RecentSearchCell.swift in Sources */,
+				4A452F2727D795D5008D096F /* NearbyHotelSearchCell.swift in Sources */,
 				4A452F1A27D012C4008D096F /* PopCoordinatable.swift in Sources */,
 				4A452F1327D002C8008D096F /* AppMainCoordinator.swift in Sources */,
+				4A452F2927D7982D008D096F /* RecentPlaceViewCell.swift in Sources */,
+				4A452F2427D79140008D096F /* TextHeaderCollectionReusableView.swift in Sources */,
 				4A452F1D27D107C2008D096F /* UIImage+Ext.swift in Sources */,
 				4A452EF327CFB789008D096F /* AppDelegate.swift in Sources */,
 				4A452EF527CFB789008D096F /* SceneDelegate.swift in Sources */,

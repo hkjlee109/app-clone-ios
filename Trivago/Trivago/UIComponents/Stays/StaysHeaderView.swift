@@ -32,17 +32,17 @@ class StaysHeaderView: UIView {
     addSubview(logoImageView)
     addSubview(searchView)
     
+    let padding = 5.0
     NSLayoutConstraint.activate([
       logoImageView.topAnchor.constraint(equalTo: topAnchor),
       logoImageView.centerXAnchor.constraint(equalTo: centerXAnchor),
       logoImageView.heightAnchor.constraint(equalToConstant: 50),
       
-      searchView.topAnchor.constraint(equalTo: logoImageView.bottomAnchor),
-      searchView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-      searchView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
-      searchView.heightAnchor.constraint(equalToConstant: 100),
+      searchView.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: padding),
+      searchView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: padding),
+      searchView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -padding),
+      searchView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -padding)
     ])
-    
   }
 
   required init?(coder: NSCoder) {

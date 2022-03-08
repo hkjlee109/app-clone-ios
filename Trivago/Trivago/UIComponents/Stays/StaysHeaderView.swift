@@ -19,7 +19,12 @@ class StaysHeaderView: UIView {
   private let searchView: UIView = {
     let view = UIView()
     view.translatesAutoresizingMaskIntoConstraints = false
-    view.backgroundColor = .blue
+    view.backgroundColor = .white
+    view.layer.cornerRadius = 8
+    view.layer.shadowColor = UIColor.black.cgColor
+    view.layer.shadowRadius = 3.0
+    view.layer.shadowOpacity = 0.1
+    view.layer.shadowOffset = CGSize(width: 1, height: 1)
     return view
   }()
   
@@ -28,7 +33,7 @@ class StaysHeaderView: UIView {
     configureLayout()
   }
 
-  private func configureLayout() {    
+  private func configureLayout() {
     addSubview(logoImageView)
     addSubview(searchView)
     

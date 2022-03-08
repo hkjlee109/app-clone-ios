@@ -26,6 +26,7 @@
 		4A452F2427D79140008D096F /* TextHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A452F2327D79140008D096F /* TextHeaderCollectionReusableView.swift */; };
 		4A452F2727D795D5008D096F /* NearbyHotelSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A452F2627D795D5008D096F /* NearbyHotelSearchCell.swift */; };
 		4A452F2927D7982D008D096F /* RecentPlaceViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A452F2827D7982D008D096F /* RecentPlaceViewCell.swift */; };
+		4A452F2B27D80348008D096F /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A452F2A27D80348008D096F /* UIColor+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		4A452F2327D79140008D096F /* TextHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		4A452F2627D795D5008D096F /* NearbyHotelSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyHotelSearchCell.swift; sourceTree = "<group>"; };
 		4A452F2827D7982D008D096F /* RecentPlaceViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentPlaceViewCell.swift; sourceTree = "<group>"; };
+		4A452F2A27D80348008D096F /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				4A452F1C27D107C2008D096F /* UIImage+Ext.swift */,
+				4A452F2A27D80348008D096F /* UIColor+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -154,10 +157,10 @@
 		4A452F2527D795C7008D096F /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
-				4A452F2127D77336008D096F /* RecentSearchCell.swift */,
 				4A452F2327D79140008D096F /* TextHeaderCollectionReusableView.swift */,
-				4A452F2627D795D5008D096F /* NearbyHotelSearchCell.swift */,
+				4A452F2127D77336008D096F /* RecentSearchCell.swift */,
 				4A452F2827D7982D008D096F /* RecentPlaceViewCell.swift */,
+				4A452F2627D795D5008D096F /* NearbyHotelSearchCell.swift */,
 			);
 			path = CollectionView;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 				4A452F2927D7982D008D096F /* RecentPlaceViewCell.swift in Sources */,
 				4A452F2427D79140008D096F /* TextHeaderCollectionReusableView.swift in Sources */,
 				4A452F1D27D107C2008D096F /* UIImage+Ext.swift in Sources */,
+				4A452F2B27D80348008D096F /* UIColor+Ext.swift in Sources */,
 				4A452EF327CFB789008D096F /* AppDelegate.swift in Sources */,
 				4A452EF527CFB789008D096F /* SceneDelegate.swift in Sources */,
 			);

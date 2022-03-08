@@ -12,7 +12,7 @@ class TextHeaderCollectionReusableView: UICollectionReusableView {
   static let reuseIdentifier = "TextHeaderCollectionReusableView"
   
   private let label = UILabel()
-  private let defaultFontSize = 18.0
+  private let defaultFontSize = 14.0
   
   var text: String? {
     didSet {
@@ -22,7 +22,7 @@ class TextHeaderCollectionReusableView: UICollectionReusableView {
   
   var fontSize: CGFloat? {
     didSet {
-      label.font = .systemFont(ofSize: fontSize ?? defaultFontSize)
+      label.font = .boldSystemFont(ofSize: fontSize ?? defaultFontSize)
     }
   }
   
@@ -32,7 +32,7 @@ class TextHeaderCollectionReusableView: UICollectionReusableView {
     label.translatesAutoresizingMaskIntoConstraints = false
     label.lineBreakMode = .byWordWrapping
     label.numberOfLines = 0
-    label.font = .systemFont(ofSize: defaultFontSize)
+    label.font = .boldSystemFont(ofSize: defaultFontSize)
     
     addSubview(label)
     

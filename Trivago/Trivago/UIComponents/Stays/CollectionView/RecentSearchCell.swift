@@ -35,7 +35,13 @@ class RecentSearchCell: UICollectionViewCell {
   }
   
   private func configure() {
-    backgroundColor = .red
+    backgroundColor = .white
+    layer.cornerRadius = 8
+    layer.shadowColor = UIColor.black.cgColor
+    layer.shadowRadius = 1.0
+    layer.shadowOpacity = 0.1
+    layer.shadowOffset = CGSize(width: 0, height: 1)
+    
 //    symbol.translatesAutoresizingMaskIntoConstraints  = false
 //    title.translatesAutoresizingMaskIntoConstraints   = false
 //

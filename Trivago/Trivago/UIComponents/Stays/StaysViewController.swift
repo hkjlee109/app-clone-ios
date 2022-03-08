@@ -25,6 +25,7 @@ class StaysViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    view.backgroundColor = UIColor.custom.background
     
     configureCollectionView()
     configureLayout()
@@ -36,8 +37,7 @@ class StaysViewController: UIViewController {
       case .recentSearches:
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.25), heightDimension: .absolute(120))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.40), heightDimension: .absolute(120))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
         group.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 5, bottom: 10, trailing: 5)
         
@@ -54,7 +54,6 @@ class StaysViewController: UIViewController {
       case .recentPlaceViews:
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.6), heightDimension: .absolute(120))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
         group.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 5, bottom: 10, trailing: 5)
@@ -75,7 +74,8 @@ class StaysViewController: UIViewController {
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(370))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
-
+        group.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 5, bottom: 10, trailing: 5)
+        
         let sectionHeaderSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(70))
         let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
           layoutSize: sectionHeaderSize,
@@ -91,6 +91,7 @@ class StaysViewController: UIViewController {
     collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
     collectionView.delegate = self
     collectionView.dataSource = self
+    collectionView.backgroundColor = .clear
 
     collectionView.register(RecentSearchCell.self, forCellWithReuseIdentifier: RecentSearchCell.reuseIdentifier)
     collectionView.register(RecentPlaceViewCell.self, forCellWithReuseIdentifier: RecentPlaceViewCell.reuseIdentifier)
@@ -146,7 +147,7 @@ extension StaysViewController: UICollectionViewDelegate {
     
     UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 0.3, delay: 0, options: []) {
       self.headerViewTopConstraint?.constant = shouldSnap ? -logoHeight - 30 : 0
-      self.headerViewHeightConstraint?.constant = shouldSnap ? 150 : 200
+      self.headerViewHeightConstraint?.constant = shouldSnap ? 120 : 200
       self.view.layoutIfNeeded()
     }
   }

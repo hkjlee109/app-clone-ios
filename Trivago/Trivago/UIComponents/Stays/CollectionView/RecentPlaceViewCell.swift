@@ -18,6 +18,7 @@ class RecentPlaceViewCell: UICollectionViewCell {
   
   private func configure() {
     backgroundColor = .green
+    layer.cornerRadius = 8
 //    symbol.translatesAutoresizingMaskIntoConstraints  = false
 //    title.translatesAutoresizingMaskIntoConstraints   = false
 //

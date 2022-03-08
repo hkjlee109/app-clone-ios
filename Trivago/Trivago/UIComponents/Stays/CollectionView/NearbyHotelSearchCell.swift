@@ -18,6 +18,7 @@ class NearbyHotelSearchCell: UICollectionViewCell {
   
   private func configure() {
     backgroundColor = .blue
+    layer.cornerRadius = 8
 //    symbol.translatesAutoresizingMaskIntoConstraints  = false
 //    title.translatesAutoresizingMaskIntoConstraints   = false
 //

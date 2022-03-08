@@ -22,7 +22,7 @@ class StaysCoordinator: NSObject, Coordinatable {
   
   func start() {
     let viewController = factory.makeStaysView()
-    viewController.tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "envelope")!, selectedImage: UIImage(systemName: "envelope")!)
+    viewController.tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "envelope")!, selectedImage: UIImage.custom.stays)
     navigationController.pushViewController(viewController, animated: false)
   }
   

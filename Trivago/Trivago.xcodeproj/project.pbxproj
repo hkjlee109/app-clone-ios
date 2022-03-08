@@ -20,6 +20,8 @@
 		4A452F1627D00306008D096F /* Coordinatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A452F1527D00306008D096F /* Coordinatable.swift */; };
 		4A452F1827D01130008D096F /* StaysCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A452F1727D01130008D096F /* StaysCoordinator.swift */; };
 		4A452F1A27D012C4008D096F /* PopCoordinatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A452F1927D012C4008D096F /* PopCoordinatable.swift */; };
+		4A452F1D27D107C2008D096F /* UIImage+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A452F1C27D107C2008D096F /* UIImage+Ext.swift */; };
+		4A452F2027D692A3008D096F /* StaysHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A452F1F27D692A3008D096F /* StaysHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		4A452F1527D00306008D096F /* Coordinatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinatable.swift; sourceTree = "<group>"; };
 		4A452F1727D01130008D096F /* StaysCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaysCoordinator.swift; sourceTree = "<group>"; };
 		4A452F1927D012C4008D096F /* PopCoordinatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopCoordinatable.swift; sourceTree = "<group>"; };
+		4A452F1C27D107C2008D096F /* UIImage+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Ext.swift"; sourceTree = "<group>"; };
+		4A452F1F27D692A3008D096F /* StaysHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaysHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,7 @@
 		4A452EF127CFB789008D096F /* Trivago */ = {
 			isa = PBXGroup;
 			children = (
+				4A452F1B27D107A5008D096F /* Extensions */,
 				4A452F1127D002B9008D096F /* Coordinators */,
 				4A452F0627CFD156008D096F /* AppMain */,
 				4A452F0827D000D1008D096F /* CompositionRoot */,
@@ -93,8 +98,8 @@
 		4A452F0727CFD170008D096F /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				4A452F1E27D6928B008D096F /* Stays */,
 				4A452F0D27D001AD008D096F /* MainTabBarController.swift */,
-				4A452EF627CFB789008D096F /* StaysViewController.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -118,6 +123,23 @@
 				4A452F1727D01130008D096F /* StaysCoordinator.swift */,
 			);
 			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		4A452F1B27D107A5008D096F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4A452F1C27D107C2008D096F /* UIImage+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4A452F1E27D6928B008D096F /* Stays */ = {
+			isa = PBXGroup;
+			children = (
+				4A452EF627CFB789008D096F /* StaysViewController.swift */,
+				4A452F1F27D692A3008D096F /* StaysHeaderView.swift */,
+			);
+			path = Stays;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,11 +216,13 @@
 				4A452F0A27D000F0008D096F /* CompositionRoot.swift in Sources */,
 				4A452F1027D00227008D096F /* CompositionRoot+CoordinatorFactory.swift in Sources */,
 				4A452F0E27D001AD008D096F /* MainTabBarController.swift in Sources */,
+				4A452F2027D692A3008D096F /* StaysHeaderView.swift in Sources */,
 				4A452F0C27D0011A008D096F /* CompositionRoot+ViewFactory.swift in Sources */,
 				4A452F1827D01130008D096F /* StaysCoordinator.swift in Sources */,
 				4A452F1627D00306008D096F /* Coordinatable.swift in Sources */,
 				4A452F1A27D012C4008D096F /* PopCoordinatable.swift in Sources */,
 				4A452F1327D002C8008D096F /* AppMainCoordinator.swift in Sources */,
+				4A452F1D27D107C2008D096F /* UIImage+Ext.swift in Sources */,
 				4A452EF327CFB789008D096F /* AppDelegate.swift in Sources */,
 				4A452EF527CFB789008D096F /* SceneDelegate.swift in Sources */,
 			);

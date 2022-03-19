@@ -15,6 +15,7 @@ class StaysViewController: UIViewController {
     case recentSearches
     case recentPlaceViews
     case nearbyHotelSearch
+    case createAccount
   }
   
   private let headerView = StaysHeaderView()
@@ -26,7 +27,7 @@ class StaysViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     view.backgroundColor = UIColor.custom.background
-    
+
     configureCollectionView()
     configureLayout()
   }
@@ -72,7 +73,7 @@ class StaysViewController: UIViewController {
       case .nearbyHotelSearch:
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(370))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(150))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
         group.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 5, bottom: 10, trailing: 5)
         
@@ -83,6 +84,17 @@ class StaysViewController: UIViewController {
 
         let section = NSCollectionLayoutSection(group: group)
         section.boundarySupplementaryItems = [sectionHeader]
+        
+        return section
+        
+      case .createAccount:
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(300))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+        group.contentInsets = NSDirectionalEdgeInsets(top: 20, leading: 5, bottom: 20, trailing: 5)
+        
+        let section = NSCollectionLayoutSection(group: group)
         
         return section
       }
@@ -96,6 +108,7 @@ class StaysViewController: UIViewController {
     collectionView.register(RecentSearchCell.self, forCellWithReuseIdentifier: RecentSearchCell.reuseIdentifier)
     collectionView.register(RecentPlaceViewCell.self, forCellWithReuseIdentifier: RecentPlaceViewCell.reuseIdentifier)
     collectionView.register(NearbyHotelSearchCell.self, forCellWithReuseIdentifier: NearbyHotelSearchCell.reuseIdentifier)
+    collectionView.register(CreateAccountCell.self, forCellWithReuseIdentifier: CreateAccountCell.reuseIdentifier)
     collectionView.register(TextHeaderCollectionReusableView.self,
                             forSupplementaryViewOfKind: StaysViewController.sectionHeaderElementKind,
                             withReuseIdentifier: TextHeaderCollectionReusableView.reuseIdentifier)
@@ -164,11 +177,12 @@ extension StaysViewController: UICollectionViewDataSource {
       return cell
     case .recentPlaceViews:
       let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RecentPlaceViewCell.reuseIdentifier, for: indexPath) as! RecentPlaceViewCell
-//      cell.viewModel = viewModel.myProfileCellViewModel
       return cell
     case .nearbyHotelSearch:
       let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NearbyHotelSearchCell.reuseIdentifier, for: indexPath) as! NearbyHotelSearchCell
-//      cell.viewModel = viewModel.myProfileCellViewModel
+      return cell
+    case .createAccount:
+      let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CreateAccountCell.reuseIdentifier, for: indexPath) as! CreateAccountCell
       return cell
     }
   }
@@ -180,6 +194,8 @@ extension StaysViewController: UICollectionViewDataSource {
     case .recentPlaceViews:
       return 4
     case .nearbyHotelSearch:
+      return 1
+    case .createAccount:
       return 1
     }
   }
@@ -195,6 +211,8 @@ extension StaysViewController: UICollectionViewDataSource {
     case .nearbyHotelSearch:
       header.text = "Looking for a hotel nearby tonight?"
       header.fontSize = 32
+    case .createAccount:
+      ()
     }
     
     return header

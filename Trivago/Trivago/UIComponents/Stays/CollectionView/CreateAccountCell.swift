@@ -1,18 +1,18 @@
 //
-//  NearbyHotelSearchCell.swift
+//  CreateAccountCell.swift
 //  Trivago
 //
-//  Created by Harry on 08.03.22.
+//  Created by Harry on 10.03.22.
 //
 
 import UIKit
 
-class NearbyHotelSearchCell: UICollectionViewCell {
+class CreateAccountCell: UICollectionViewCell {
   
-  static let reuseIdentifier = "NearbyHotelSearchCell"
+  static let reuseIdentifier = "CreateAccountCell"
   
   private let backgroundImageView: UIImageView = {
-    let view = UIImageView(image: UIImage.custom.searchNearbyHotels)
+    let view = UIImageView(image: UIImage.custom.createAccount)
     view.translatesAutoresizingMaskIntoConstraints = false
     view.contentMode = .scaleAspectFill
     view.layer.cornerRadius = 8

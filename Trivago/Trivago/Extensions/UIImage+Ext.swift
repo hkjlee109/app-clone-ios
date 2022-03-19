@@ -16,7 +16,9 @@ extension UIImage {
 struct CustomUIImage {
   
   let logo = UIImage(named: "Logo")!
+  let searchNearbyHotels = UIImage(named: "SearchNearbyHotels")!
+  let createAccount = UIImage(named: "CreateAccount")!
   
   let stays = UIImage(systemName: "lock")!
-  
+
 }
